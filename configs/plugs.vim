@@ -36,4 +36,5 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'elixir-editors/vim-elixir'
 Plug 'skywind3000/vim-quickui'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'sbdchd/neoformat'
 call plug#end()
