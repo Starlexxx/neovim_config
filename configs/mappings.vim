@@ -6,10 +6,13 @@ let mapleader=','
 " Close nvim
 nnoremap <leader>q :q!<CR>
 nnoremap <leader>Q :qa!<CR>
+
 "Save files
 nnoremap <leader>w :wa!<CR>
+
 " Close buffer
 nmap <leader>b :bw<CR>
+
 " Copy to clipboard
 vnoremap  <leader>y  "+y
 nnoremap  <leader>Y  "+yg_

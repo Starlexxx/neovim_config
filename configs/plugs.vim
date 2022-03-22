@@ -1,5 +1,4 @@
 call plug#begin()
-
 Plug 'hzchirs/vim-material'
 Plug 'romgrk/barbar.nvim'
 Plug 'romgrk/barbar.nvim'
@@ -19,6 +18,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'thoughtbot/vim-rspec'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
 Plug 'vim-airline/vim-airline'
@@ -37,4 +37,5 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'skywind3000/vim-quickui'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'sbdchd/neoformat'
+
 call plug#end()
