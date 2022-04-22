@@ -37,5 +37,8 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'skywind3000/vim-quickui'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'sbdchd/neoformat'
+Plug 'benekastah/neomake'
+Plug 'kchmck/vim-coffee-script', { 'for': ['coffee', 'haml', 'eruby'] }
+Plug 'mfussenegger/nvim-dap'
 
 call plug#end()

@@ -19,6 +19,15 @@ nnoremap  <leader>Y  "+yg_
 nnoremap  <leader>y  "+y
 nnoremap  <leader>yy  "+yy
 
+" Ruby staff
+nmap <leader>rc :call RubocopAutoFix()<CR>
+autocmd FileType ruby,eruby,yaml,haml setlocal iskeyword+=?
+autocmd FileType ruby,eruby,yaml,haml setlocal iskeyword+=!
+autocmd FileType ruby compiler ruby
+
+" Handlebars/Mustache
+autocmd BufRead,BufNewFile *.hb.erb set filetype=mustache
+
 " LSP Saga
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -51,9 +60,9 @@ nmap <leader>1 :BufferPrevious<CR>
 nmap <leader>bd :BufferClose<CR>
 
 " RSpec.vim mappings
-" map <Leader>tf :call RunCurrentSpecFile()<CR>
-" map <Leader>tn :call RunNearestSpec()<CR>
-" map <Leader>ta :call RunAllSpecs()<CR>
+map <Leader>tf :call RunCurrentSpecFile()<CR>
+map <Leader>tn :call RunNearestSpec()<CR>
+map <Leader>ta :call RunAllSpecs()<CR>
 
 " Signify
 nmap <leader>gj <plug>(signify-next-hunk)
@@ -68,3 +77,11 @@ nmap <silent> <leader>ts :TestSuite<CR>
 
 " QuickUI
 noremap <space><space> :call quickui#menu#open()<cr>
+
+" Custom funcs
+function! RubocopAutoFix()
+  exe "w"
+  silent exe "!rubocop -a -R % &> /dev/null"
+  silent exe "e %"
+  silent exe "Neomake"
+endfun
